@@ -1,10 +1,12 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './theme';
 import { createGlobalStyle } from "styled-components";
-import Router from "./Router";
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { useRecoilValue } from 'recoil';
 import { isDarkAtom } from './atoms';
+import Coins from "./routes/Coins";
+import Coin from "./routes/Coin";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -73,11 +75,16 @@ function App() {
   const isDark = useRecoilValue(isDarkAtom);
   return (
     <>
-      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-        <GlobalStyle />
-        <Router />
-        <ReactQueryDevtools initialIsOpen={false} />
-      </ThemeProvider>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+          <GlobalStyle />
+          <Switch>
+            <Route path="/:coinId"><Coin /></Route>
+            <Route path="/"><Coins /></Route>
+          </Switch>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </ThemeProvider>
+      </BrowserRouter>
     </>
   );
 }
