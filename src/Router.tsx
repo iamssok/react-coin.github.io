@@ -3,7 +3,7 @@ import Coins from "./routes/Coins";
 import Coin from "./routes/Coin";
 
 function Router() {
-  return <HashRouter basename={process.env.PUBLIC_URL}>
+  return <HashRouter>
     <Switch>
       <Route path="/:coinId"><Coin /></Route>
       <Route path="/"><Coins /></Route>
