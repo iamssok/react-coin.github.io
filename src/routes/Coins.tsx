@@ -9,16 +9,13 @@ import { isDarkAtom } from "../atoms";
 const Container = styled.div`
   padding:0px 20px;
 `;
-
 const Header = styled.header`
   display:flex;
   justify-content:center;
   align-items:center;
   height:10vh;
 `;
-
 const CoinsList = styled.ul``;
-
 const Coin = styled.li`
   max-width:500px;
   margin: 10px auto;
@@ -38,18 +35,15 @@ const Coin = styled.li`
     }
   }
 `;
-
 const Title = styled.h1`
   font-weight:bold;
   font-size:48px;
   color: ${props => props.theme.accentColor};
 `;
-
 const Loader = styled.span`
   display:block;
   text-align:center;
 `;
-
 const Img = styled.img`
   width:35px;
   margin-right:10px;

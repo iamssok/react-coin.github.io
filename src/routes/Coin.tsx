@@ -11,25 +11,21 @@ const Container = styled.div`
   margin:0 auto;
   padding:0px 20px;
 `;
-
 const Header = styled.header`
   display:flex;
   justify-content:center;
   align-items:center;
   height:10vh;
 `;
-
 const Title = styled.h1`
   font-weight:bold;
   font-size:48px;
   color: ${props => props.theme.accentColor};
 `;
-
 const Loader = styled.span`
   display:block;
   text-align:center;
 `;
-
 const Overview = styled.div`
   display:flex;
   justify-content:space-between;
@@ -37,7 +33,6 @@ const Overview = styled.div`
   background:rgba(0, 0, 0, 0.5);
   border-radius:15px;
 `;
-
 const OverviewItem = styled.div`
   display:flex;
   flex-direction: column;
@@ -48,26 +43,26 @@ const OverviewItem = styled.div`
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 5px;
+    color: #fff;
   }
   span:last-child {
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #fff;
   }
 `;
-
 const Description = styled.p`
   margin:20px 5px;
+  color: #fff;
   line-height:24px;
 `;
-
 const Tabs = styled.div`
   display:grid;
   grid-template-columns:repeat(2, 1fr);
   gap:10px;
   margin:25px 0;
 `;
-
 const Tab = styled.span<{ isActive: boolean }>`
   padding:7px 0;
   background:rgba(0, 0, 0, 0.5);
@@ -78,7 +73,7 @@ const Tab = styled.span<{ isActive: boolean }>`
   text-transform:uppercase;
   color: ${props => props.isActive ? props.theme.accentColor : props.theme.textColor};
   a {
-    display:block;s
+    display:block;
   }
 `;
 

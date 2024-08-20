@@ -1,10 +1,9 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { darkTheme, lightTheme } from './theme';
-import { createGlobalStyle } from "styled-components";
-import { ReactQueryDevtools } from 'react-query/devtools';
 import { useRecoilValue } from 'recoil';
 import { isDarkAtom } from './atoms';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import Coins from "./routes/Coins";
 import Coin from "./routes/Coin";
 
@@ -73,6 +72,7 @@ a {
 
 function App() {
   const isDark = useRecoilValue(isDarkAtom);
+
   return (
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
