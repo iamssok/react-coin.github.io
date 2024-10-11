@@ -6,4 +6,7 @@ Stack : React, TypeScript, React Query, Recoil, Styled-Components
 
 ### useQuery
 
-const { 반환 } = useQuery( queryKey, queryFn );
+## Recoil
+
+### useSetRecoilState
+### atom
