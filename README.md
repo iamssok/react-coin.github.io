@@ -7,7 +7,7 @@
 
 ## 코인 정보 페이지
 - [x] 코인 정보 출력하기
-- [x] Tab path에 맞는 route 가져오기
+- [x] 활성화 된 Tab path에 맞는 route 가져오기
 - [x] Apexcharts 사용해보기
 
 ## Stack
