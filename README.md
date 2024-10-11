@@ -2,11 +2,11 @@
 
 Stack : React, TypeScript, React Query, Recoil, Styled-Components
 
-### 📌 React Query
+### 🏷️ React Query
 
 ### useQuery
 
-### 📌 Recoil
+### 🏷️ Recoil
 
 ### useSetRecoilState
 ### atom
