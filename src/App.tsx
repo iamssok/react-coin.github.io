@@ -4,8 +4,8 @@ import { darkTheme, lightTheme } from './theme';
 import { useRecoilValue } from 'recoil';
 import { isDarkAtom } from './atoms';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import Coins from "./routes/Coins";
-import Coin from "./routes/Coin";
+import Coins from './routes/Coins';
+import Coin from './routes/Coin';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -70,7 +70,7 @@ a {
 }
 `;
 
-function App() {
+export default function App() {
   const isDark = useRecoilValue(isDarkAtom);
 
   return (
@@ -88,5 +88,3 @@ function App() {
     </>
   );
 }
-
-export default App;

@@ -1,52 +1,52 @@
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetchCoins } from "../api";
-import { Helmet } from "react-helmet";
 import { useSetRecoilState } from "recoil";
 import { isDarkAtom } from "../atoms";
 
 const Container = styled.div`
-  padding:0px 20px;
+  padding: 0px 20px;
 `;
 const Header = styled.header`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 `;
 const CoinsList = styled.ul``;
 const Coin = styled.li`
-  max-width:500px;
+  max-width: 400px;
   margin: 10px auto;
-  background:white;
-  border-radius:15px;
-  font-weight:bold;
+  border-radius: 15px;
+  background: ${props => props.theme.boxColor};
+  font-weight: bold;
   color: ${props => props.theme.textColor};
   a {
-    display:flex;
-    align-items:center;
-    padding:20px;
-    transition:color .2s ease-in;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    transition: color .15s ease-in;
   }
   &:hover {
     a {
-      color:${props => props.theme.accentColor};
+      color: ${props => props.theme.accentColor};
     }
   }
 `;
 const Title = styled.h1`
-  font-weight:bold;
-  font-size:48px;
+  font-weight: bold;
+  font-size: 48px;
   color: ${props => props.theme.accentColor};
 `;
 const Loader = styled.span`
-  display:block;
-  text-align:center;
+  display: block;
+  text-align: center;
 `;
 const Img = styled.img`
-  width:35px;
-  margin-right:10px;
+  width: 35px;
+  margin-right: 10px;
 `;
 
 interface ICoin {
@@ -70,7 +70,7 @@ function Coins() {
       </Helmet>
       <Header>
         <Title>Coins</Title>
-        <button onClick={toggleDarkAtom}>thmem Mode</button>
+        <button onClick={toggleDarkAtom} style={{position:"fixed", right:40}}>thmem Mode</button>
       </Header>
       {isLoading ? (<Loader>Loading...</Loader>) : (
         <CoinsList>

@@ -7,73 +7,73 @@ import { fetchCoinInfo, fetchCoinTickers } from "../api";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
-  max-width:500px;
-  margin:0 auto;
-  padding:0px 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0px 20px;
 `;
 const Header = styled.header`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 `;
 const Title = styled.h1`
-  font-weight:bold;
-  font-size:48px;
+  font-weight: bold;
+  font-size: 48px;
   color: ${props => props.theme.accentColor};
 `;
 const Loader = styled.span`
-  display:block;
-  text-align:center;
+  display: block;
+  text-align: center;
 `;
 const Overview = styled.div`
-  display:flex;
-  justify-content:space-between;
-  margin:10px 0;
-  background:rgba(0, 0, 0, 0.5);
-  border-radius:15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-radius: 15px;
+  background: ${props => props.theme.boxColor};
 `;
 const OverviewItem = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding:20px 30px;
+  padding: 20px 30px;
   span:first-child {
-    font-size: 12px;
-    font-weight: 400;
-    text-transform: uppercase;
     margin-bottom: 5px;
-    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: ${props => props.theme.textColor};
   }
   span:last-child {
-    font-size: 24px;
     font-weight: 700;
+    font-size: 24px;
     text-transform: uppercase;
-    color: #fff;
+    color: ${props => props.theme.textColor};
   }
 `;
 const Description = styled.p`
-  margin:20px 5px;
-  color: #fff;
-  line-height:24px;
+  margin: 20px 5px;
+  color: ${props => props.theme.textColor};
+  line-height: 24px;
 `;
 const Tabs = styled.div`
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:10px;
-  margin:25px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 25px 0;
 `;
 const Tab = styled.span<{ isActive: boolean }>`
-  padding:7px 0;
-  background:rgba(0, 0, 0, 0.5);
-  border-radius:15px;
-  font-weight:400;
-  font-size:12px;
-  text-align:center;
-  text-transform:uppercase;
+  padding: 10px 0;
+  border-radius: 30px;
+  background: ${props => props.theme.boxColor};
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
   color: ${props => props.isActive ? props.theme.accentColor : props.theme.textColor};
   a {
-    display:block;
+    display: block;
   }
 `;
 

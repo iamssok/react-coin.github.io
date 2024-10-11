@@ -1,7 +1,6 @@
-import 'styled-components';
-
 export interface DefaultTheme {
-  textColor: string;
   bgColor: string;
+  boxColor: string;
+  textColor: string;
   accentColor: string;
 }
