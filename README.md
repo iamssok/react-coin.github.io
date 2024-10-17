@@ -15,11 +15,12 @@ API 연동, 상태 관리, 컴포넌트 재사용 등의 개념을 학습하기 
 - [x] HTML5
 - [ ] CSS3
 - [ ] SCSS
-- [x] Styled-Components
 - [ ] JavaScript
+- [ ] jQuery
 - [x] React
 - [x] TypeScript
 - [x] TanStack Query (React Query)
 - [x] Recoil
+- [x] Styled-Components
 - [ ] Bootstrap
 - [ ] ChatGPT
