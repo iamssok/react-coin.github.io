@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://iamssok.github.io/coins.github.io/",
+  "homepage": "https://iamssok.github.io/react-coin.github.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
