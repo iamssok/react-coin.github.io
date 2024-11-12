@@ -37,7 +37,7 @@ const OverviewItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px 22px;
   span:first-child {
     margin-bottom: 5px;
     font-weight: 400;

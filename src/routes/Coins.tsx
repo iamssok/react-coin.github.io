@@ -7,13 +7,20 @@ import { useSetRecoilState } from "recoil";
 import { isDarkAtom } from "../atoms";
 
 const Container = styled.div`
-  padding: 0px 20px;
+  padding: 20px;
 `;
 const Header = styled.header`
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   height: 10vh;
+`;
+const Title = styled.h1`
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 40px;
+  color: ${props => props.theme.accentColor};
 `;
 const CoinsList = styled.ul``;
 const Coin = styled.li`
@@ -35,18 +42,9 @@ const Coin = styled.li`
     }
   }
 `;
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 48px;
-  color: ${props => props.theme.accentColor};
-`;
 const Loader = styled.span`
   display: block;
   text-align: center;
-`;
-const Img = styled.img`
-  width: 35px;
-  margin-right: 10px;
 `;
 
 interface ICoin {
@@ -70,7 +68,7 @@ function Coins() {
       </Helmet>
       <Header>
         <Title>Coins</Title>
-        <button onClick={toggleDarkAtom} style={{position:"fixed", right:40}}>thmem Mode</button>
+        <button onClick={toggleDarkAtom}>Theme mode</button>
       </Header>
       {isLoading ? (<Loader>Loading...</Loader>) : (
         <CoinsList>
@@ -80,7 +78,6 @@ function Coins() {
                 pathname: `/${coin.id}`,
                 state: { name: coin.name },
               }}>
-                <Img src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`} alt="" />
                 {coin.name} &rarr;
               </Link>
             </Coin>
